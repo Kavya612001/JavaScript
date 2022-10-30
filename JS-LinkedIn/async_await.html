@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    
+    <script>
+        // Async, Await used to write promises using a simple syntax
+        // const myPromise = new Promise(
+        //     function(resolve, reject) {
+        //         if(true==false) {
+        //             resolve("true message");
+        //         }
+        //         else {
+        //             reject("false message");
+        //         }
+        //     }
+        // )
+        // Async - waits for the promise to do something
+        // async function myAsync() {
+        //     try {
+        //         const result = await myPromise;
+        //         console.log(result);
+        //     }
+        //     catch(e) {
+        //         console.log(e);
+        //     }
+        //     finally {
+        //         console.log('Finally');
+        //     }
+        // }
+
+        // myAsync();
+
+        const myPromise = new Promise((resolve) => {
+            setTimeout( () => {
+                resolve('success');
+            },2000)
+        })
+        
+        async function myAsync() {
+            console.log('Before Promise');
+            const result = await myPromise;
+            console.log(result);
+            console.log('After Promise');
+        }
+
+        console.log('before async');
+        myAsync();
+        console.log('after async');
+    </script>
+</body>
+</html>

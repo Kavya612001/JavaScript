@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nullish coalescing operator</title>
+</head>
+<body>
+     
+    <script>
+        // nullish coalescing , Only cares abt the right side of the operator when the left side is null or undefined
+        var un = undefined ?? 'Kavya';
+        console.log("left side is undefined : "+un)
+        var name = 'Kavya' ?? 'Prema'
+        console.log(name);
+        var res = 0 ?? 1;
+        console.log(res);
+        var bool = true || false;
+        console.log(bool);
+        var stringVal = '' || 'k';
+        console.log(stringVal);
+    </script>
+</body>
+</html>

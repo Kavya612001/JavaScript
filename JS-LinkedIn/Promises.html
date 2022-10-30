@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    
+
+    <script>
+        // Promises - something happens only when something else has taken place
+        const myPromise = new Promise(
+            function(resolve, reject) {
+                if(true==true) {
+                    resolve("true message");
+                }
+                else {
+                    reject("false message");
+                }
+            }
+        )
+
+        myPromise
+        .then( function(msg) {
+            console.log(msg);
+        })
+        .catch(function (msg) {
+            console.log(msg);
+        })
+        .finally(function (msg) {
+            console.log(msg);
+        })
+    </script>
+</body>
+</html>

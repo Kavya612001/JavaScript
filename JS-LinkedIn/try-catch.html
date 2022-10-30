@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-catch</title>
+</head>
+<body>
+    
+
+     <script>
+
+        try {
+            console.log('this runs');
+            doFail() 
+                console.log('this never runs');
+        }
+        catch(e) {
+            console.log("error:"+e);
+            console.log("error name: "+e.name);
+            console.log("error msg: "+e.message);
+        }
+        finally {
+            console.log('this runs regardless of the exceptions');
+        }
+        try{
+            if(typeof('false') != Boolean) {
+            throw Error("false is enclosed in double quotes and hence its not a Boolean")
+            }
+        }
+        catch(error) {
+            console.log("/Error/ "+error);
+        }
+     </script>
+</body>
+</html>
