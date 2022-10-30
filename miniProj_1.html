@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Proj #1</title>
+</head>
+<body>
+    
+    <h1 id="change-name">Welcome</h1>
+    <h3>
+        My favorite cat is
+        <span id="catName">Zephyr</span>
+
+    </h3>
+    <script>
+        var name="Kavya";
+        var text= "My name is: "+name;
+        var h1_text= document.getElementById("change-name");
+        h1_text.innerHTML = name;
+
+        var catName= document.getElementById("catName");
+        var zephyr = catName.innerText;
+        var cats = zephyr+ " and Zoddie"
+        catName.innerHTML = cats;
+
+    </script>
+
+</body>
+</html>

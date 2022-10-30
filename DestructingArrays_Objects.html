@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing Array and Objects</title>
+</head>
+<body>
+    
+    <script>
+        var arr = ['Kavya','Rajesh','Sampath','prema','sharmi'];
+        let [kavya, rajesh, sampath, ...rest] = arr; // ...rest , rest of the elements in the array is returned
+        console.log(rest);
+
+        var fullName = prompt("Enter your full name");
+        let [firstName, lastName] = fullName.split(" ");
+        console.log(firstName,lastName);
+
+        const person = {
+            'name': 'Kavya',
+            'age' : 21,
+            'company_name' : 'Zuora',
+            'color' : 'green',
+            'colleague': 'Rajesh'
+        }
+
+        let {name, age, company_name:company, color = 'blue', ...rest1} = person;
+        console.log(rest1);
+        console.log(name, age, company, color);
+    </script>
+</body>
+</html>

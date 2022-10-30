@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    
+    <script>
+        
+        (function getPerson() {
+            if(myName == undefined) {
+                myName = "Kavya";
+            }
+
+            console.log(myName);
+            var myName; //Hoisting automatically moves the variable declarations to the top
+        }) ();
+
+
+        function getAge(age) {
+            
+            // Undefined generally means no datatype is associated with the variable
+            if(age === undefined) {
+                age = 21;
+            }
+            console.log("Age:",age )
+        }
+
+        getAge();
+
+
+    </script>
+</body>
+</html>

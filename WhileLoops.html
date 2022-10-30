@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+    <h1>Lists: </h1>
+    <ul class="js-li"></ul>
+</head>
+<body>
+    
+
+    <script>
+        // var num = Number(prompt("Enter a number"));
+        // var startNum = 1;
+        // while(startNum <= num) {
+        //     console.log(startNum);
+        //     startNum++;
+        // }
+        var num = Number(prompt("Enter a number"));
+        var liNode = document.querySelector(".js-li");
+        var startNum = 1;
+        var html = '';
+        while(startNum <= num) {
+            html = html+"<li>"+startNum+"</li>";
+            startNum++;
+        }
+        liNode.innerHTML = html;
+
+    </script>
+</body>
+</html>
+

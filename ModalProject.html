@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ModalProject.css">
+    <title>Modal Project</title>
+</head>
+<body>
+    <div class="modal js-modal">
+        <h1 class="js-modal-title">This is a Modal</h1>
+        <p class="js-modal-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ex sequi laborum error voluptatum beatae necessitatibus, magnam iusto eos culpa velit minima, laudantium exercitationem? Eveniet iste expedita sit deserunt blanditiis?
+            Iusto facilis blaecto alias culpa voluptatem neque, fugit numquam, eaque ducimus repellendus repellat repudiandae voluptate nemo. Animi, dolorum.
+            Inventore debitis voluptas et cupiditate enim saepe. Maxime in fugiat nihil nobis dolores reiciendis, eligendi sed quia error dolorum reprehenderit animi ullam vitae, veniam et illum harum rerum accusamus! Illum.
+            Amet aliquam placeat perferendis, cum nemo rerum, recusandae commodi ex quasi odit rem distinctio fuga! Reprehenderit nemo, tempore eius delectus omnis officia assumenda pariatur ipsam molestiae, temporibus sequi ea vel!
+            Laboriosam id quidem consequuntur mollitia magnam! Quae ipsum, sequi architecto quam maxime delectus itaque modi nulla assumenda minima, ex alias sed expedita nihil laborum, harum error dolores ipsam consequuntur quo?
+            Animi non aut optio? Vero eos fugit corporis impedit atque dignissimos earum cupiditate corrupti. Perspiciatis numquam sunt qui, excepturi iste fuga et quae ratione accusamus voluptatibus rem quo veniam odio.
+        </p>
+        <p>
+            <button class="js-close-modal">CLOSE Modal</button>
+        </p>
+    </div>
+
+    <button class="js-open-modal">OPEN Modal</button>
+   
+
+    <script>
+
+        class Modal {
+
+            constructor(title,text) {
+                this.modal = document.querySelector(".js-modal");
+            }
+
+            open() {
+
+                this.modal.style.display = 'initial';
+            }
+
+            close() {
+                this.modal.style.display = 'none';
+            }
+
+            changeContent(title,text) {
+                if(title !== undefined)
+                    this.modal.querySelector(".js-modal-title").innerText = title;
+                if(text !== undefined) 
+                    this.modal.querySelector(".js-modal-content").innerText = text;
+            }
+        }
+        const openBtn = document.querySelector(".js-open-modal");
+        const closeBtn = document.querySelector(".js-close-modal")
+        const modal = new Modal();
+        modal.changeContent('New Title added','wohhoooooo  bro');
+        openBtn.addEventListener('click', function(event) {
+            modal.open();
+        });
+
+        closeBtn.addEventListener('click', function(event) {
+            modal.close();
+        })
+        
+
+    </script>
+</body>
+</html>

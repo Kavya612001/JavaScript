@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let and Constant</title>
+</head>
+<body>
+    
+
+    <script>
+        // var - Global scope
+        // let - Block Scope
+        // const - Block Scope - value will never change after the initialisation
+        var name = "kavya";
+        function logName() {
+            console.log(name);
+            name = "newNameKavya";
+        }
+        logName();
+        console.log(name);
+
+        var course = "JavaScript";
+        if (course == 'JavaScript') {
+            let rate = 40;
+        }
+        console.log(rate); //Error: rate is not defined
+
+    </script>
+</body>
+</html>

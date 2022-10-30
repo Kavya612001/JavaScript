@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+<body>
+    
+    <h1 id="sentence">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, hic cupiditate praesentium unde quasi harum dolore nihil libero at consequuntur, porro nemo doloremque delectus laudantium adipisci. Aspernatur alias perferendis quam?
+    </h1>
+
+    <script>
+        var sentenceNode = document.getElementById("sentence");
+        var sentence = sentenceNode.innerText;
+        console.log("Sentence: ",sentence);
+
+        var upperSentence = sentence.toUpperCase();
+        console.log(upperSentence);
+
+        var lowerSentence = sentence.toLowerCase();
+        console.log(lowerSentence);
+
+        var firstTenChars = sentence.substr(0,11);
+        console.log(firstTenChars);
+
+        var splitSentence = sentence.split(" ");
+        console.log(splitSentence);
+
+        var bracketWords = "("+splitSentence.join(")(")+")";
+        console.log(bracketWords);
+
+        // sentenceNode.innerText = bracketWords;
+
+        var firstThreeWords = splitSentence.slice(0,3);
+        console.log(firstThreeWords);
+
+        var middleWords = splitSentence.slice(5,10);
+        var makeSentence = middleWords.join(" ");
+        sentenceNode.innerHTML = makeSentence;
+    </script>
+
+</body>
+</html>

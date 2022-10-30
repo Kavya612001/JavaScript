@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selectors</title>
+</head>
+<body>
+    
+    <small>This one is first</small>
+    <h1 class="title"> 
+        Hello World, this is the title. 
+        <small>Change me, too!</small>
+    </h1>
+
+    <a href="#">Change Link Text</a>
+
+    <script>
+        // Selects the first matching class, doesnt select all the classes
+        titleNode = document.querySelector(".title");
+        //titleNode.innerText = "Changed using a class";
+
+        // var small = document.querySelector("small");
+        // small.innerText = "Im smaller";
+
+        // var small = titleNode.querySelector("small");
+        // small.innerText = "Im smaller wohooo";
+
+        var a = document.querySelector("a");
+        a.innerText = "kavya.zuora.com";
+    </script>
+</body>
+</html>

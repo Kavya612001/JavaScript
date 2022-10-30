@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Loops</title>
+</head>
+<body>
+    <h1>For Each Loops</h1>
+    <ol>
+        <li class="js-li">List Item 1</li>
+        <li class="js-li">List Item 2</li>
+        <li class="js-li">List Item 3</li>
+        <li class="js-li">List Item 4</li>
+        <li class="js-li">List Item 5</li>
+    </ol>
+
+    <script>
+
+        // var names = ['Kavya','Rajesh','Nancy'];
+        // names.forEach(function(name, index) {
+        //     console.log(index,name);
+        // })
+        var liNode = document.querySelectorAll(".js-li");
+        liNode.forEach(function(node,index) {
+            if(index >=3) {
+                node.remove();
+                return false;
+            }
+            node.innerText = index + " is the index";
+        })
+    </script>
+</body>
+</html>

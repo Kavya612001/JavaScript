@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Casting</title>
+</head>
+<body>
+    
+    <script>
+        var age = "30";
+        // Type casting
+        age = Number(age);
+        console.log(typeof(age));
+
+        var age = prompt("What is your age? ");
+        age = Number(age);
+        if(age) {
+            alert("You have a proper age");
+        }
+        else {
+            alert("Not a valid number");
+        }
+        console.log(age);
+
+        var age = 30;
+        age = String(age);
+        console.log(typeof(age));
+
+        var isCat = "true";
+        isCat = Boolean(isCat);
+        console.log(typeof(isCat));
+
+        var course = "JS for beginners";
+        course = Array(course);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice With Functions</title>
+</head>
+<body>
+    
+    <h1 id="text"></h1>
+
+    <script>
+        function doMath(num) {
+            num = Number(num);
+            if(num) {
+                var result = (num+100) / 4;
+                return result;
+            }
+            else {
+                console.log("Not a valid number");
+            }
+        }
+
+        var res = doMath(100)
+        console.log(res);
+
+
+        function $(id) {
+            console.log("Id is:",id);
+            return document.getElementById(id);
+        }
+
+        var h1Node = $("text");
+        h1Node.innerText = "Custom Inner Text";
+
+        function cToFahrenheit(celcius) {
+            var fahrenheit = (celcius*1.8) + 32;
+            return fahrenheit;
+        }
+
+        var fahrenheit = cToFahrenheit(30);
+        console.log("Value in fahrenheit:",fahrenheit);
+
+    </script>
+</body>
+</html>

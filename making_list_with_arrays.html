@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making List with Arrays</title>
+</head>
+<body>
+    
+    <script>
+        names = ["Kavya","Rajesh","Nancy","Prema","Sampath"];
+        console.log(names);
+        sliceOp = names.slice(0,2);
+        console.log("Sliced op: ",sliceOp);
+        console.log("Op after slicing",names);
+
+        friends = new Array("Sharmila","Hari");
+        console.log(friends);
+        console.log(typeof(friends));
+
+        newFriends=friends.push("Muthu");
+        console.log(newFriends);
+
+        newFrnd = friends.pop();
+        console.log(newFrnd);
+
+    </script>
+</body>
+</html>

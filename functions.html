@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+    <script>
+        // Default argument is given for age
+        function greeting(name,age=21) {
+            console.log("Welcome",name);
+            console.log("Age is:",age);
+
+            return "SpaceX";
+            console.log("Does not execute");
+        }
+        var res=greeting("Kavya");
+        greeting("Henry",22);
+        console.log(res);
+    </script>
+</body>
+</html>

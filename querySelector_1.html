@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Part 2</title>
+</head>
+<body>
+    
+    <ul>
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+        <li>Number 4</li>
+        <li>Number 5</li>
+        <li>Number 6</li>
+        <li>Number 7</li>
+    </ul>
+
+    <input type="text" class="form-control" style="padding:30px; font-size: 30px;" value="Hello">
+
+
+    <script>
+        var lis = document.querySelectorAll("li");
+        lis[0].innerText = "Number 1 changed";
+        lis[5].innerHTML = "<a href='#'>www.google.com</a>"
+
+        var input = document.querySelector(".form-control");
+        console.log(input.value);
+        
+    </script>
+</body>
+</html>

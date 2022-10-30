@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervals</title>
+</head>
+<body>
+    
+    <!-- Set interval , executes the function for every milliseconds as mentioned in the argument -->
+    <script>
+        function greeting() {
+            console.log("greeting for every 3000ms");
+        }
+        var logger = setInterval(greeting,1000); //clearInterval(logger) , used to stop the function
+        setTimeout(function() {
+            clearInterval(logger)
+        },5000);
+    </script> 
+</body>
+</html>

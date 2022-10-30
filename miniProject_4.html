@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 4</title>
+</head>
+<body>
+
+    <h1 id="amount"></h1>
+    
+    <script>
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function calculateTotalAmount(billAmount,tipAmount=0.15) {
+            var totalAmount = billAmount + (billAmount*tipAmount);
+            return totalAmount;
+        }
+
+        var totalAmount = calculateTotalAmount(1400);
+        amountNode = $("amount");
+        amountNode.innerText = "Total amount to be paid:"+totalAmount;
+        console.log("Total amount to be paid:",totalAmount);
+
+        totalAmount = calculateTotalAmount(1400,0.10);
+        amountNode = $("amount");
+    </script>
+</body>
+</html>

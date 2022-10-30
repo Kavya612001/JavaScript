@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extending classes</title>
+</head>
+<body>
+    
+
+    <script>
+
+        class Animal {
+            constructor(name, weight, height) {
+                this.name = name;
+                this.weight = weight;
+                this.height = height;
+            }
+
+            getInfo() {
+                console.log(this.name+" weighs "+this.weight+" and is "+this.height+ " tall");
+            }
+
+            speak() {
+                console.log("I speak a thing");
+            }
+        }
+
+        class Cat extends Animal {
+            constructor(name,weight,height,sound) {
+                super(name,weight,height);
+                this.sound = sound;
+            }
+            getSound() {
+                console.log("Cat makes the sound "+this.sound);
+            }
+
+            sleep() {
+                console.log("Cat takes a nap");
+                return this; //retured the whole class ob , so that the methods can be chained while calling
+            }
+
+            speak() {
+                console.log("Meeoowwwwww");
+                return this;
+            }
+        }
+
+        const tiger = new Animal ('Tiger',300,200);
+        tiger.getInfo();
+        const cat = new Cat('Cat',200,100,'Meow');
+        cat.getInfo();
+        cat.getSound();
+        cat.sleep()
+            .speak()
+            .sleep(); //Methods are chained together
+    </script>
+</body>
+</html>
